@@ -1,0 +1,465 @@
+/* =====================================
+   🌐 GLOBAL RESET
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* =====================================
+   🟦 NAVBAR / HEADER
+===================================== */
+.navbar, .header {
+    background: #1976d2;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+/* Subheading (Home page) */
+.subheading {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* =====================================
+   🌓 THEME TOGGLE
+===================================== */
+.theme-toggle {
+    background: #fff;
+    color: #1976d2;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+.theme-toggle:hover {
+    background: #1565c0;
+    color: #fff;
+}
+
+/* =====================================
+   🏠 HOME PAGE
+===================================== */
+.wrapper {
+    max-width: auto;
+    margin: auto;
+    text-align: center;
+    padding: 0px 20px;
+    
+}
+
+.container {
+    margin: 40px 0;
+}
+.container .btn {
+    gap: 12px;
+    font-size: 1rem;
+    padding: 12px 28px;
+}
+.container .btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* =====================================
+   📝 FORM CONTAINER (Register & Update)
+===================================== */
+.form-container {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Form Headings */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+}
+
+/* Register = Blue, Update = Red */
+.form-container h2.register-title {
+    color: #0d47a1;
+}
+.form-container h2.update-title {
+    color: #e53935;
+}
+
+/* Table layout */
+.form-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-container td {
+    padding: 12px 8px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.form-container label {
+    font-weight: bold;
+    color: #444;
+    display: inline-block;
+    margin-right: 10px;
+    min-width: 140px;
+    text-align: right;
+}
+
+/* Inputs */
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[readonly] {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Focus effect */
+.form-container input[type="text"]:focus,
+.form-container input[type="number"]:focus {
+    border-color: #2196f3;
+    box-shadow: 0 0 6px rgba(33, 150, 243, 0.4);
+}
+
+/* Readonly input (Actor Id in Update) */
+.form-container input[readonly] {
+    background: #f5f5f5;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* =====================================
+   🎛 BUTTONS (Shared)
+===================================== */
+.btn, 
+input[type="submit"], 
+input[type="reset"], 
+.btn-submit, 
+.btn-reset {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 8px;
+    transition: background 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+
+/* Primary Action (Submit / Show Report / Home) */
+.btn, 
+.btn-submit, 
+input[type="submit"] {
+    background: #43a047;
+    color: white;
+}
+.btn:hover, 
+.btn-submit:hover, 
+input[type="submit"]:hover {
+    background: #2e7d32;
+    transform: scale(1.05);
+}
+
+/* Secondary Action (Reset / Cancel) */
+.btn-reset, 
+input[type="reset"] {
+    background: #e53935;
+    color: white;
+}
+.btn-reset:hover, 
+input[type="reset"]:hover {
+    background: #c62828;
+    transform: scale(1.05);
+}
+
+/* =====================================
+   🔍 SEARCH BAR (Actor Report)
+===================================== */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    background: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    width: 280px;
+    font-size: 1rem;
+    outline: none;
+}
+.search-input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 6px rgba(25, 118, 210, 0.3);
+}
+
+.search-btn {
+    background: #1976d2;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+.search-btn:hover {
+    background: #0d47a1;
+    transform: scale(1.05);
+}
+
+/* =====================================
+   📊 REPORT TABLE
+===================================== */
+.content table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.content th, 
+.content td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.content th {
+    background: #1976d2;
+    color: white;
+    font-weight: bold;
+}
+
+.content tr:hover {
+    background: #f1f1f1;
+}
+
+/* =====================================
+   🎯 BUTTON GROUP (Report Page Bottom)
+===================================== */
+.btn-group {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.btn-group a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #43a047;
+    color: white;
+    padding: 10px 18px;
+    margin: 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+.btn-group a:hover {
+    background: #2e7d32;
+    transform: scale(1.05);
+}
+.btn-group img {
+    width: 22px;
+    height: 22px;
+}
+
+/* =====================================
+   📌 FOOTER
+===================================== */
+/* =======================================
+   🌐 WRAPPER FOR STICKY FOOTER
+======================================= */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =======================================
+   🌟 MAIN CONTENT
+======================================= */
+.content-container {
+    flex: 1; /* Takes all remaining space between header/navbar and footer */
+    padding: 20px;
+}
+
+/* =======================================
+   🦶 FOOTER
+======================================= */
+.footer {
+    background: #1976d2;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+/* =====================================
+   🌙 DARK MODE (Shared)
+===================================== */
+body.dark-mode {
+    background: #181818;
+    color: #f1f1f1;
+}
+
+/* Navbar & Header */
+body.dark-mode .navbar, 
+body.dark-mode .header {
+    background: #111;
+}
+
+/* Theme Toggle */
+body.dark-mode .theme-toggle {
+    background: #444;
+    color: #fff;
+}
+body.dark-mode .theme-toggle:hover {
+    background: #222;
+}
+
+/* Home Page */
+body.dark-mode .subheading {
+    color: #ccc;
+}
+
+/* Form container */
+body.dark-mode .form-container {
+    background: #2a2a2a;
+    color: #f1f1f1;
+}
+body.dark-mode .form-container h2.register-title {
+    color: #90caf9;
+}
+body.dark-mode .form-container h2.update-title {
+    color: #ef9a9a;
+}
+body.dark-mode .form-container label {
+    color: #ddd;
+}
+body.dark-mode .form-container input[type="text"],
+body.dark-mode .form-container input[type="number"],
+body.dark-mode .form-container input[readonly] {
+    background: #333;
+    color: white;
+    border: 1px solid #666;
+}
+body.dark-mode .form-container input[readonly] {
+    background: #2a2a2a;
+    color: #aaa;
+}
+
+/* Report Page */
+body.dark-mode .search-form {
+    background: #2a2a2a;
+}
+body.dark-mode .search-input {
+    background: #333;
+    color: #fff;
+    border: 1px solid #666;
+}
+body.dark-mode .content table {
+    background: #2a2a2a;
+    color: #fff;
+}
+body.dark-mode .content th {
+    background: #111;
+}
+body.dark-mode .content tr:hover {
+    background: #333;
+}
+body.dark-mode .btn-group a {
+    background: #388e3c;
+}
+
+/* Buttons */
+body.dark-mode .btn, 
+body.dark-mode .btn-submit, 
+body.dark-mode input[type="submit"] {
+    background: #388e3c;
+}
+body.dark-mode .btn-reset, 
+body.dark-mode input[type="reset"] {
+    background: #d32f2f;
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background: #111;
+    color: #ccc;
+    
+}
+
+
+/* =======================================
+   🌟 Sticky Footer only for Home page
+======================================= */
+.sticky-footer-wrapper {
+    min-height: 100vh;           /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-footer-wrapper .content-container {
+    flex: 1;                     /* Push footer to bottom */
+}

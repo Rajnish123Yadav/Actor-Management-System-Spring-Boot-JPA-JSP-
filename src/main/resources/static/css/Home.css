@@ -1,0 +1,183 @@
+/* =====================================
+   🌐 GLOBAL RESET
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* =====================================
+   🟦 HEADER / NAVBAR
+===================================== */
+.header, .navbar {
+    background: #1976d2;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* =====================================
+   🌐 WRAPPER FOR STICKY FOOTER
+===================================== */
+.wrapper.sticky-footer-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* =====================================
+   🏠 BUTTONS
+===================================== */
+.container.btn-group {
+    margin: 40px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.container.btn-group a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #43a047;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+.container.btn-group a:hover {
+    background: #2e7d32;
+    transform: scale(1.05);
+}
+.container.btn-group img {
+    width: 20px;
+    height: 20px;
+}
+
+/* =====================================
+   🦶 FOOTER
+===================================== */
+.footer {
+    background: #1976d2;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+/* =====================================
+   🌙 DARK MODE
+===================================== */
+body.dark-mode {
+    background: #181818;
+    color: #f1f1f1;
+}
+
+body.dark-mode .header,
+body.dark-mode .navbar,
+body.dark-mode .footer {
+    background: #111;
+    color: #ccc;
+}
+
+body.dark-mode .subheading {
+    color: #ccc;
+}
+
+body.dark-mode .container.btn-group a {
+    background: #388e3c;
+}
+
+/* =====================================
+   📱 RESPONSIVE DESIGN
+===================================== */
+@media (max-width: 768px) {
+    .header, .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 20px;
+        font-size: 1.2rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .subheading {
+        font-size: 1rem;
+        margin: 15px 0;
+    }
+
+    .container.btn-group a {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .container.btn-group img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header, .navbar {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .subheading {
+        font-size: 0.95rem;
+    }
+
+    .container.btn-group a {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .container.btn-group img {
+        width: 16px;
+        height: 16px;
+    }
+}
