@@ -14,7 +14,7 @@
     <groupId>com.nt</groupId>
     <artifactId>SpringMVC_Project-08_MiniProject-CURD-Operations</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>SpringMVC_Project-08_MiniProject-CURD-Operations</name>
     <description>Student-Management-System DemoApp</description>
 
