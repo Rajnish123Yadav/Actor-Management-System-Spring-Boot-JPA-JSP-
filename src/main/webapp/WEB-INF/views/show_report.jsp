@@ -118,11 +118,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        &copy; 2025 | Developed by <strong>Rajnish Yadav</strong> | MCA | Spring Boot Mini Project
-    </div>
-
 </body>
+
 
 </html>
